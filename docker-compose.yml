@@ -52,7 +52,7 @@ services:
 
   celery:
     build: .
-    command: celery -A avomd_assignment_django worker -l info -P eventlet
+    command: celery -A avomd_assignment_django worker -l info -P prefork
     user: nobody
     volumes:
       - .:/app
